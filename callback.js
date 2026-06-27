@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const app = express();
 
-app.use(bodyParser.json());
+app.use(express.json());
 
 app.post('/callback', (req, res) => {
   const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
