@@ -19,7 +19,7 @@ app.post('/callback', (req, res) => {
   };
   fs.appendFileSync('payment_log.txt', JSON.stringify(logEntry) + '\n');
 
-  res.status(201).json({ status: 'received' });
+  res.status(200).json({ status: 'received' });
 });
 
 app.get('/', (req, res) => {
